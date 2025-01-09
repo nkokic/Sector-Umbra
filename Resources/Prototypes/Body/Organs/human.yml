@@ -208,7 +208,10 @@
     groups:
     - id: Food
     - id: Drink
-
+  - type: ReactionMixer
+    reactionTypes:
+    - Centrifuge
+    
 - type: entity
   id: OrganHumanLiver
   parent: BaseHumanOrgan

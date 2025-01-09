@@ -5,6 +5,10 @@ using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared.Chemistry.Reaction;
+using Microsoft.CodeAnalysis;
+using Robust.Shared.GameObjects;
+using Solution = Content.Shared.Chemistry.Components.Solution;
 
 namespace Content.Server.Body.Systems
 {
@@ -32,7 +36,7 @@ namespace Content.Server.Body.Systems
             ent.Comp.NextUpdate += args.PausedTime;
         }
 
-        public override void Update(float frameTime)
+        public override void Update(float frameTime) // TODO: try activating UpdateChemicals() function of SharedSolutionContainerSystem for reaction mixer component
         {
             var query = EntityQueryEnumerator<StomachComponent, OrganComponent, SolutionContainerManagerComponent>();
             while (query.MoveNext(out var uid, out var stomach, out var organ, out var sol))
@@ -61,7 +65,6 @@ namespace Content.Server.Body.Systems
                         {
                             if (reagent.Quantity > delta.ReagentQuantity.Quantity)
                                 reagent = new(reagent.Reagent, delta.ReagentQuantity.Quantity);
-
                             stomachSolution.RemoveReagent(reagent);
                             transferSolution.AddReagent(reagent);
                         }
@@ -75,7 +78,11 @@ namespace Content.Server.Body.Systems
                     stomach.ReagentDeltas.Remove(item);
                 }
 
-                _solutionContainerSystem.UpdateChemicals(stomach.Solution.Value);
+                // Make stomach process the solution
+                if (TryComp<ReactionMixerComponent>(uid, out var reactionMixer))
+                    _solutionContainerSystem.UpdateChemicals(stomach.Solution.Value, true, reactionMixer);
+
+                //_solutionContainerSystem.UpdateChemicals(stomach.Solution.Value);
 
                 // Transfer everything to the body solution!
                 _solutionContainerSystem.TryAddSolution(bodySolution.Value, transferSolution);
