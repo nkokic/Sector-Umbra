@@ -18,6 +18,7 @@
   - PlushieSharkBlue # CD
   - PlushieSharkPink # CD
   - PlushieSharkGrey # CD: Putting these up here so they show up along the existing plushies.
+  - ThreeCandles
   - Lighter
   - CigPackGreen
   - CigPackRed
@@ -26,6 +27,7 @@
   - CigarCase
   - CigarGold
   - ClothingNeckLGBTPin
+  - ClothingNeckAllyPin
   - ClothingNeckAromanticPin
   - ClothingNeckAsexualPin
   - ClothingNeckBisexualPin
@@ -34,6 +36,8 @@
   - ClothingNeckLesbianPin
   - ClothingNeckNonBinaryPin
   - ClothingNeckPansexualPin
+  - ClothingNeckOmnisexualPin
+  - ClothingNeckGenderqueerPin
   - ClothingNeckTransPin
   - ClothingNeckAutismPin
   - ClothingNeckGoldAutismPin
@@ -57,6 +61,9 @@
   # - LunchboxBlue # CD - Umbra: Not merged
   # - LunchboxYellow # CD - Umbra: Not merged
   - Cane # CD
+  - MedCrutchesForearm # CD
+  - GoldRing # CD
+  - SilverRing # CD
 
 - type: loadoutGroup
   id: Glasses
@@ -606,6 +613,7 @@
   - QuartermasterTurtleneck
   - QuartermasterTurtleneckSkirt
   - QuartermasterFormalSuit
+  - QuartermasterForemansuit # CD
 
 - type: loadoutGroup
   id: QuartermasterNeck
@@ -622,6 +630,7 @@
   loadouts:
   - QuartermasterWintercoat
   - CargoBomber # CD
+  - ForemanCoat # CD
 
 - type: loadoutGroup
   id: QuartermasterShoes
@@ -643,9 +652,14 @@
   id: CargoTechnicianJumpsuit
   name: loadout-group-cargo-technician-jumpsuit
   loadouts:
-  - CargoTechnicianJumpsuit
-  - CargoTechnicianJumpskirt
+#  - CargoTechnicianJumpsuit
+#  - CargoTechnicianJumpskirt
   - CargoTechnicianPants # CD
+  - CargoTechnicianJumpsuitLight # CD
+  - CargoTechnicianJumpskirtLight # CD
+  - CargoTechnicianJumpsuitDark # CD
+  - CargoTechnicianJumpskirtDark # CD
+  - CargoTechnicianOveralls # CD
 
 - type: loadoutGroup
   id: CargoTechnicianBackpack
@@ -669,6 +683,7 @@
   loadouts:
   - BlackShoes
   - CargoWinterBoots
+  - SteelWorkboots # CD
 
 - type: loadoutGroup
   id: SalvageSpecialistBackpack
@@ -916,6 +931,7 @@
   minLimit: 0
   loadouts:
   - RegularLabCoat
+  - ModernLabCoat # CD
   - ScienceLabCoat
   - ScienceWintercoat
   - RoboticistLabCoat
@@ -992,6 +1008,7 @@
   loadouts:
   - HeadofSecurityCoat
   - HeadofSecurityWinterCoat
+  - SecurityGreatcoat # CD
 
 - type: loadoutGroup
   id: WardenHead
@@ -1016,6 +1033,7 @@
   loadouts:
   - WardenCoat
   - WardenArmoredWinterCoat
+  - SecurityGreatcoat # CD
 
 - type: loadoutGroup
   id: SecurityHead
@@ -1065,6 +1083,7 @@
   - ArmorVest
   - ArmorVestSlim
   - SecurityOfficerWintercoat
+  - SecurityGreatcoat # CD
 
 - type: loadoutGroup
   id: SecurityShoes
@@ -1102,17 +1121,19 @@
   loadouts:
   - DetectiveJumpsuit
   - DetectiveJumpskirt
+  - DetectiveJumpsuitCasual # CD
+  - DetectiveJumpskirtCasual # CD
   - NoirJumpsuit
   - NoirJumpskirt
 
 - type: loadoutGroup
   id: DetectiveOuterClothing
   name: loadout-group-detective-outerclothing
-  minLimit: 0
   loadouts:
   - DetectiveArmorVest
   - DetectiveCoat
   - DetectiveCoatGrey
+  - ForensicJacket # CD
 
 - type: loadoutGroup
   id: SecurityCadetJumpsuit
@@ -1155,6 +1176,7 @@
   - ChiefMedicalOfficerJumpskirt
   - ChiefMedicalOfficerTurtleneckJumpsuit
   - ChiefMedicalOfficerTurtleneckJumpskirt
+  - ChiefMedicalOfficerFormalsuit # CD
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerOuterClothing
@@ -1162,6 +1184,7 @@
   minLimit: 0
   loadouts:
   - ChiefMedicalOfficerLabCoat
+  - ChiefMedicalOfficerModernLabCoat # CD
   - ChiefMedicalOfficerWintercoat
 
 - type: loadoutGroup
@@ -1194,6 +1217,7 @@
   - GreenSurgeryCap
   - PurpleSurgeryCap
   - NurseHat
+  - NurseHatAlt # Umbra
 
 - type: loadoutGroup
   id: MedicalDoctorJumpsuit
@@ -1212,6 +1236,7 @@
   - ViroJumpskirt # CD
   - GeneJumpsuit # CD
   - GeneJumpskirt # CD
+  - SkirtOfLife # Umbra
 
 - type: loadoutGroup
   id: MedicalDoctorOuterClothing
@@ -1219,6 +1244,7 @@
   minLimit: 0
   loadouts:
   - RegularLabCoat
+  - ModernLabCoat # CD
   - MedicalDoctorWintercoat
   # CD: Separate Senior roles
   # - SeniorPhysicianLabCoat
@@ -1250,6 +1276,7 @@
   - MedicalDoctorPDA
   # CD: Separate Senior roles
   # - SeniorPhysicianPDA
+  - NursePDA # Umbra Job Title
 
 - type: loadoutGroup
   id: MedicalGloves
@@ -1279,6 +1306,7 @@
   loadouts:
   - ChemistJumpsuit
   - ChemistJumpskirt
+  - ChemistCasualsuit # CD
 
 - type: loadoutGroup
   id: ChemistOuterClothing
@@ -1286,7 +1314,9 @@
   minLimit: 0
   loadouts:
   - RegularLabCoat
+  - ModernLabCoat # CD
   - ChemistLabCoat
+  - ChemistModernLabCoat # CD
   - ChemistWintercoat
 
 - type: loadoutGroup
@@ -1361,6 +1391,7 @@
   loadouts:
   - PsychologistJumpsuit
   - PsychologistJumpskirt
+  - PsychologistCasualJumpsuit # CD
 
 - type: loadoutGroup
   id: BoxerJumpsuit

@@ -128,7 +128,7 @@ namespace Content.Server.Administration.Systems
                     prayerVerb.Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/pray.svg.png"));
                     prayerVerb.Act = () =>
                     {
-                        _quickDialog.OpenDialog(player, "Subtle Message", "Message", "Popup Message", (string message, string popupMessage) =>
+                        _quickDialog.OpenDialog(player, "Subtle Message", "Message", "Popup Message", (LongString message, LongString popupMessage) => // Umbra, increases the max subtle message length
                         {
                             _prayerSystem.SendSubtleMessage(targetActor.PlayerSession, player, message, popupMessage == "" ? Loc.GetString("prayer-popup-subtle-default") : popupMessage);
                         });
@@ -370,7 +370,7 @@ namespace Content.Server.Administration.Systems
 
                 }
 
-                if (lawBoundComponent != null && target != null)
+                if (lawBoundComponent != null && target != null && _adminManager.HasAdminFlag(player, AdminFlags.Moderator))
                 {
                     args.Verbs.Add(new Verb()
                     {

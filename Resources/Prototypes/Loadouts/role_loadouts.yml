@@ -10,8 +10,8 @@
   - FormalShoes # CD
   - Survival
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobHeadOfPersonnel
@@ -26,13 +26,19 @@
   - Glasses
   - Survival
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 # Silicons
+#- type: roleLoadout
+#  id: JobBorg
+#  nameDataset: roleloadout doesn't support both so need to update that first.
+#  canCustomizeName: true
+
 - type: roleLoadout
   id: JobStationAi
-  nameDataset: names_ai
+  nameDataset: NamesAI
+  canCustomizeName: true
 
 # Civilian
 - type: roleLoadout
@@ -50,8 +56,8 @@
   - Glasses
   - Survival
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobBartender
@@ -65,8 +71,8 @@
   - Glasses
   - Survival
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobServiceWorker
@@ -93,8 +99,8 @@
   - Glasses
   - Survival
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobLibrarian
@@ -106,8 +112,8 @@
   - Glasses
   - Survival
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobLawyer
@@ -120,8 +126,8 @@
   - Glasses
   - Survival
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobChaplain
@@ -136,8 +142,8 @@
   - Glasses
   - Survival
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobJanitor
@@ -151,9 +157,9 @@
   - Glasses
   - Survival
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - JanitorPlunger
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobBotanist
@@ -227,8 +233,8 @@
   - Glasses
   - Survival
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobCargoTechnician
@@ -249,6 +255,7 @@
   id: JobSalvageSpecialist
   groups:
   - GroupTankHarness
+  - SalvageSpecialistJumpsuit # CD
   - SalvageSpecialistBackpack
   - SalvageSpecialistOuterClothing
   - SalvageSpecialistShoes
@@ -282,8 +289,8 @@
   - StationEngineerBackpack
   - SurvivalExtended
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobStationEngineer
@@ -310,8 +317,8 @@
   - AtmosphericTechnicianShoes
   - SurvivalExtended
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 # Science
 - type: roleLoadout
@@ -379,7 +386,7 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
-  - PersonalItemsHeadOfSecurity # Umbra
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobWarden
@@ -395,7 +402,7 @@
   - Trinkets
   - SecurityStar
   - GroupSpeciesBreathToolSecurity
-  - PersonalItemsWarden # Umbra
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobSecurityOfficer
@@ -411,13 +418,12 @@
   - SecurityGlassesOrHud # CD Addition
   - Trinkets
   - SecurityStar
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathToolSecurity
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobDetective
   groups:
-  - GroupTankHarness
   - DetectiveHead
   - DetectiveNeck
   - DetectiveJumpsuit
@@ -428,8 +434,8 @@
   - SecurityGlassesOrHud # CD Addition
   - Trinkets
   - SecurityStar
-  - PersonalItemsDetective # Umbra
   - GroupSpeciesBreathToolSecurity
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobSecurityCadet
@@ -458,8 +464,8 @@
   - Glasses
   - SurvivalMedical
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathToolMedical
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobMedicalDoctor
@@ -522,8 +528,8 @@
   - Glasses
   - SurvivalMedical
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathToolMedical
+  - PersonalItemsJobAgnostic # Umbra
 
 # Wildcards
 - type: roleLoadout
@@ -546,8 +552,8 @@
   - Glasses
   - Survival
   - Trinkets
-  - PersonalItemsJobAgnostic # Umbra
   - GroupSpeciesBreathTool
+  - PersonalItemsJobAgnostic # Umbra
 
 - type: roleLoadout
   id: JobPsychologist
